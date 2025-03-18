@@ -23,9 +23,9 @@ class JWTService {
         // save refresh token to db
         try{
             const newToken = new refreshToken({
-                token: token,
+                token: refreshToken,
                 userId : userId
-            })
+            });
             // store refresh token
             await newToken.save();
         }  catch(error) {
